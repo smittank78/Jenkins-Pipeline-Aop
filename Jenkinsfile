@@ -49,6 +49,12 @@ pipeline {
                 success{
                     junit 'target/surefire-reports/**/*.xml'
                     echo "junit test completed."
+
+                    mail bcc: '', body: '''Hi Team,
+Congrats!! FTs Are executed successfully.
+
+Regards,
+Jenkins Team''', cc: '', from: '', replyTo: '', subject: 'FT Tests Notification ', to: 'giantgujarat@gmail.com'
                 }
             }
         }
