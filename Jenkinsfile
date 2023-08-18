@@ -10,7 +10,9 @@ pipeline {
 
     stages {
         stage('Declarative') {
+             steps {
                 echo "Jenkins Pipeline using the declarative script"
+             }
         }
         stage('Clone') {
             steps {
