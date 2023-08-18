@@ -18,6 +18,7 @@ pipeline {
             steps {
                 echo 'Clone Started'
                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/smittank78/Jenkins-Pipeline-Aop.git']])
+                sh 'git checkout devlop'
                 echo 'Clone Finished...'
             }
             post{
